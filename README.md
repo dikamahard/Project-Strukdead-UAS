@@ -1,7 +1,7 @@
 # JUDUL_PROYEK
 
 Anggota Kelompok:
-* 
+* RIZKY MAHARDIKA H (140810200010)
 * NAMA (NPM)
 * NAMA (NPM)
 ---
