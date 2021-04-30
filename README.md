@@ -1,4 +1,4 @@
-# JUDUL_PROYEK
+# PROGRAM BUKU TELEPON
 
 Anggota Kelompok:
 * RIZKY MAHARDIKA H          (140810200010)
@@ -9,9 +9,13 @@ Anggota Kelompok:
 
 
 ## Tujuan dan Manfaat
+Tujuan dibuatnya program buku telepon ini adalah sebagai penilaian akhir (UAS) Praktikum Stuktur Data dalam bentuk project yang dikerjakan secara berkelompok. 
+
+Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan selama satu semester menjadi suatu program yang dapat berjalan dengan baik.
+
 
 ## Penjelasan Aplikasi
-
+Program buku telepon ini adalah program yang dirancang untuk menyimpan kontak seseorang, dapat menambahkan nama orang, menambahkan no telepon, mencari dan melihat kontak, menghapus kontak, dan menghapus no telepon.
 
 ## Gambar Rancangan Antar Muka
 <!--
@@ -22,6 +26,7 @@ dibebaskan sesuai kreatifitas kalian
 
 
 ## Rencana Pengerjaan Projek
+
 ## Gambar Rancangan Antar Muka
 <!--
 Dalam kondisi pandemi seperti ini, tidak memungkinkan untuk bertemu bertatap muka. Maka dari itu
