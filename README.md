@@ -3,7 +3,7 @@
 Anggota Kelompok:
 * RIZKY MAHARDIKA H          (140810200010)
 * MUHAMMAD ARIIQ RAKHA SHAFA (140810200064)
-* NAMA (NPM)
+* MUTHIA AZZAHRA             (140810200066)
 ---
 ## Latar Belakang
 
