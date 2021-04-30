@@ -1,7 +1,7 @@
 # JUDUL_PROYEK
 
 Anggota Kelompok:
-* NAMA (NPM)
+* 
 * NAMA (NPM)
 * NAMA (NPM)
 ---
