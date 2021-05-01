@@ -1,0 +1,30 @@
+Brain Storming
+
+Program kontak telpon
+-program dapat menyimpan kontak orang
+-mencari kontak
+-menghapus kontak
+-mengganti data kontak (hapus data, update data)
+-menambah kontak
+-menampilkan kontak perorangan
+-menampilkan seluruh kontak
+-menambahkan nomor telpon pada kontak yang sudah ada
+-mengganti nomor telpon
+-menghapus nomor telpon
+
+Struktur kontak
+-nama depan
+-nama belakang
+-daerah
+- *nomor (merupakan node single link list, sehingga dapat menyimpan banyak nomor)
+
+
+Penerapan
+-menerpakan multi single linked list
+-insert last
+-travers kontak
+-travers nomor
+-create kontak
+-insert data (nama, nomor, daerah)
+-delete 
+-delete kontak
