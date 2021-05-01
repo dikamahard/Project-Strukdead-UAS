@@ -15,7 +15,8 @@ Program kontak telpon
 Struktur kontak
 -nama depan
 -nama belakang
--daerah
+-email
+-alamat
 - *nomor (merupakan node single link list, sehingga dapat menyimpan banyak nomor)
 
 
