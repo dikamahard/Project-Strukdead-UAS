@@ -13,15 +13,15 @@ Oleh karena itu, kami terinspirasi dari fitur Gosend yang ada pada aplikasi Goje
 
 ## Tujuan dan Manfaat
 Tujuan dibuatnya program Send-it ini adalah untuk memenuhi penilaian akhir (UAS) Praktikum Stuktur Data dalam bentuk project yang dikerjakan secara berkelompok. Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
-Menambah (input data) dan menghapus driver
-Melihat driver perorangan (status jumlah antrian dan barang)
-Melihat seluruh driver
-Pelanggan dapat memilih driver yang tersedia
-Menambah (input data) dan menghapus pelanggan
-Menghapus pelanggan yang sudah selesai melakukan pesanan
-Melihat seluruh pelanggan
-Menginput jumlah barang
-Push & Pop barang
+1. Menambah (input data) dan menghapus driver
+2. Melihat driver perorangan (status jumlah antrian dan barang)
+3. Melihat seluruh driver
+4. Pelanggan dapat memilih driver yang tersedia
+5. Menambah (input data) dan menghapus pelanggan
+6. Menghapus pelanggan yang sudah selesai melakukan pesanan
+7. Melihat seluruh pelanggan
+8. Menginput jumlah barang
+9. Push & Pop barang
 
 
 Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan oleh asisten praktikum selama satu semester menjadi suatu program yang dapat berjalan dengan baik. Selain itu, kami berharap agar dengan hadirnya program ini dapat berguna dalam mengatur (secara sederhana) sistem antar barang melalui jasa ojek online. 
