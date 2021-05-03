@@ -1,31 +1,42 @@
 Brain Storming
 
-Program kontak telpon
--program dapat menyimpan kontak orang
--mencari kontak
--menghapus kontak
--mengganti data kontak (hapus data, update data)
--menambah kontak
--menampilkan kontak perorangan
--menampilkan seluruh kontak
--menambahkan nomor telpon pada kontak yang sudah ada
--mengganti nomor telpon
--menghapus nomor telpon
+*Program Clone GoSend (Dilihat dari sisi perusahaan)
 
-Struktur kontak
--nama depan
--nama belakang
--email
--alamat
-- *nomor (merupakan node single link list, sehingga dapat menyimpan banyak nomor)
+==> Driver (linked list)
+- Menambah Driver (input data driver)
+- Menghapus Driver
+- Melihat Driver perorangan (Status jumlah antrian dan barang)
+- Melihat Seluruh Driver 
+
+==> Pelanggan (Queue)
+- Dapat memilih driver yang tersedia
+- Menambah Pelanggan (input data pelanggan)
+- Menghapus pelanggan yang sudah selesai
+- Melihat seluruh pelanggan 
+- Menginput jumlah barang
+
+==> Barang (Stack)
+- Push barang
+- Pop barang
+
+================================================================================
+
+- driver
+
+	-daftar
+	(menampilkan seluruh driver beserta statusnya, kemudian pilih driver untuk drop barang)
+
+	-tambah
+	(menambah node driver pada list, )
+
+	-hapus
+	 ()
 
 
-Penerapan
--menerpakan multi single linked list
--insert last
--travers kontak
--travers nomor
--create kontak
--insert data (nama, nomor, daerah)
--delete 
--delete kontak
+- pelanggan
+
+	-tambah 
+	(masukkan data pelanggan, masukkan jml barang, pilih driver)
+
+	-daftar 
+	(menampilkan list pelanggan) 
