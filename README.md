@@ -1,4 +1,4 @@
-# PROGRAM BUKU TELEPON
+# PROGRAM SEND-IT
 
 Anggota Kelompok:
 * RIZKY MAHARDIKA H          (140810200010)
@@ -6,24 +6,29 @@ Anggota Kelompok:
 * MUTHIA AZZAHRA             (140810200066)
 ---
 ## Latar Belakang
-Hidup di zaman modern dimana teknologi sudah semakin canggih, tentu saja komunikasi jarak jauh sudah bukan menjadi masalah bagi kehidupan sehari-hari. Hal ini dibuktikan dengan hadirnya alat komunikasi seperti telepon genggam (handphone), telepon kabel, komputer, dan lain sebagainya yang sudah familiar di lingkungan masyarakat. Tak bisa dipungkiri bahwa komunikasi merupkan hal yang tidak lepas dari keseharian kita, mulai dari bertegur sapa dengan orang terdekat sampai urusan pekerjaan, semua dapat dilakukan hanya dari sambungan telepon sehinga telepon merupakan salah satu hal terpenting dalam hidup kita di zaman sekarang.  
+Seiring dengan perkembangan zaman, teknologi pun kian berkembang pesat. Tak heran jika banyak pekerjaan sehari-hari menjadi lebih mudah dengan bantuan teknologi. Mulai dari menggunakan social media, mengakses berbagai informasi melalui internet, menggunakan peralatan canggih untuk membersihkan rumah, melakukan transaksi online, hingga memakai aplikasi tertentu untuk kebutuhan rumah tangga. Salah satu contoh aplikasi yang sudah tak asing lagi namanya di kalangan masyarakat ialah Gojek. Aplikasi ini melayani angkutan melalui jasa ojek. Beberapa fitur gojek antara lain adalah go-ride, gocar, gofood, gopay, gosend, dan lain lain. Dengan kehadiran gojek, masyarakat dapat dengan mudah memesan makanan, mengantar barang, membayar tagihan, dan masih banyak lagi. 
 
-Saat ingin menghubungi seseorang menggunakan telepon, alangkah lebih baik dan efisien jika kita sudah menyimpan kontak-kontak orang dalam suatu buku telepon. Hal ini dikarenakan buku telepon dapat menyimpan data (nama, no telp, dan lain-lain) dengan rapi sehingga mudah bagi kita jika mencari orang yang ingin kita tuju. Oleh karena itu, hadirlah program buku telepon ini untuk memudahkan pengguna dalam menyimpan daftar no telepon dan sebagainya. Selain digunakan sebagai penilaian tugas akhir Praktikum Struktur Data, besar harapan kami program ini dapat bermanfaat di masa yang akan datang.
+Oleh karena itu, kami terinspirasi dari fitur Gosend yang ada pada aplikasi Gojek, untuk membuat suatu program sederhara yang bernama “Program Send-it” dengan menerapkan materi-materi struktur data. Program ini dirancang untuk me-manage sistem antar barang sesuai pesanan antara driver dan customer. 
+
 
 ## Tujuan dan Manfaat
-Tujuan dibuatnya program buku telepon ini adalah sebagai penilaian akhir (UAS) Praktikum Stuktur Data dalam bentuk project yang dikerjakan secara berkelompok. 
+Tujuan dibuatnya program Send-it ini adalah untuk memenuhi penilaian akhir (UAS) Praktikum Stuktur Data dalam bentuk project yang dikerjakan secara berkelompok. Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
+Menambah (input data) dan menghapus driver
+Melihat driver perorangan (status jumlah antrian dan barang)
+Melihat seluruh driver
+Pelanggan dapat memilih driver yang tersedia
+Menambah (input data) dan menghapus pelanggan
+Menghapus pelanggan yang sudah selesai melakukan pesanan
+Melihat seluruh pelanggan
+Menginput jumlah barang
+Push & Pop barang
 
-Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan oleh asisten praktikum selama satu semester menjadi suatu program yang dapat berjalan dengan baik.
+
+Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan oleh asisten praktikum selama satu semester menjadi suatu program yang dapat berjalan dengan baik. Selain itu, kami berharap agar dengan hadirnya program ini dapat berguna dalam mengatur (secara sederhana) sistem antar barang melalui jasa ojek online. 
 
 
 ## Penjelasan Aplikasi
-Program buku telepon ini adalah program yang dirancang untuk :
-- menyimpan kontak seseorang
-- menambahkan nama orang
-- menambahkan no telepon
-- mencari dan melihat kontak
-- menghapus kontak
-- menghapus no telepon
+Prinsip program Send-it ini hampir sama seperti Go Send, yaitu terdapat list driver yang menyediakan jasa antar barang berdasarkan pesanan, kemudian tersedia antrian bagi pemesan yang ingin memakai jasa driver tersebut, dan driver memiliki batas barang yang akan diantar dengan menerapkan stack. 
 
 ## Gambar Rancangan Antar Muka
 <!--
@@ -34,7 +39,7 @@ dibebaskan sesuai kreatifitas kalian
 
 
 ## Rencana Pengerjaan Projek
-
+Dalam mengerjakan Project UAS Struktur Data ini, kami mengerjakannya secara virtual menggunakan beberapa aplikasi pendukung. Untuk berdiskusi, kami menggunakan multiperson chat Line dan Discord. Selain itu, github juga digunakan untuk berkolaborasi dalam mengerjakan project. Project ini dibuat dengan bahasa pemrograman C++ menggunakan Visual Studio Code. Pembagian tugas dibagi berdasarkan kesepakatan bersama saat sedang diskusi.
 
 
 ## Lisensi
