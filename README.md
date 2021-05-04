@@ -12,7 +12,13 @@ Oleh karena itu, kami terinspirasi dari fitur Gosend yang ada pada aplikasi Goje
 
 
 ## Tujuan dan Manfaat
-Tujuan dibuatnya program Send-it ini adalah untuk memenuhi penilaian akhir (UAS) Praktikum Stuktur Data dalam bentuk project yang dikerjakan secara berkelompok. Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
+Tujuan dibuatnya program Send-it ini adalah untuk memenuhi penilaian akhir (UAS) Praktikum Stuktur Data dalam bentuk project yang dikerjakan secara berkelompok. 
+
+Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan oleh asisten praktikum selama satu semester menjadi suatu program yang dapat berjalan dengan baik. Selain itu, kami berharap agar dengan hadirnya program ini dapat berguna dalam mengatur (secara sederhana) sistem antar barang melalui jasa ojek online. 
+
+
+## Penjelasan Aplikasi
+Prinsip program Send-it ini hampir sama seperti Go Send, yaitu terdapat list driver yang menyediakan jasa antar barang berdasarkan pesanan, kemudian tersedia antrian bagi pemesan yang ingin memakai jasa driver tersebut, dan driver memiliki batas barang yang akan diantar dengan menerapkan stack. Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
 1. Menambah (input data) dan menghapus driver
 2. Melihat driver perorangan (status jumlah antrian dan barang)
 3. Melihat seluruh driver
@@ -23,12 +29,6 @@ Tujuan dibuatnya program Send-it ini adalah untuk memenuhi penilaian akhir (UAS)
 8. Menginput jumlah barang
 9. Push & Pop barang
 
-
-Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan oleh asisten praktikum selama satu semester menjadi suatu program yang dapat berjalan dengan baik. Selain itu, kami berharap agar dengan hadirnya program ini dapat berguna dalam mengatur (secara sederhana) sistem antar barang melalui jasa ojek online. 
-
-
-## Penjelasan Aplikasi
-Prinsip program Send-it ini hampir sama seperti Go Send, yaitu terdapat list driver yang menyediakan jasa antar barang berdasarkan pesanan, kemudian tersedia antrian bagi pemesan yang ingin memakai jasa driver tersebut, dan driver memiliki batas barang yang akan diantar dengan menerapkan stack. 
 
 ## Gambar Rancangan Antar Muka
 <!--
