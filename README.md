@@ -29,6 +29,9 @@ Prinsip program Send-it ini hampir sama seperti Go Send, yaitu terdapat list dri
 8. Menginput jumlah barang
 9. Push & Pop barang
 
+![image](https://user-images.githubusercontent.com/66240799/116961288-27be7b00-accd-11eb-8172-4992f8b87e3e.png)
+
+
 
 ## Gambar Rancangan Antar Muka
 <!--
