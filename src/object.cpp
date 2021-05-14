@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-const int maxRating = 50; // ganti jadi max rating = 5
+const int maxRating = 50; //karena sehari max 10 orang dan poin max per orang 5
 const int maxElement = 10;
 
 struct pelanggan {
@@ -20,7 +20,8 @@ struct queue {
 struct stack {
     //int jumlahBarang[maxElement];
     int poin[maxElement];
-    // string tujuan[maxElement];
+    // string passanger[maxElement];
+    string passanger[maxElement];
     int sum;  // sum akan terus terakumulasi setiap ada penilaian, sum <= maxRating
     int top;
 };

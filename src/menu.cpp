@@ -38,13 +38,81 @@ void menuListDriver(ptrdriver head) {
     cout << "==============================================" << '\n';
     cout << ">> List Driver \n";
     printDriver(head);
-    cout << ">> Pilih Driver \n";
+    //cout << ">> Pilih Driver \n";
 }
 
-void menuPilihDriver(string& nama) {
-    //cout << ">> Pilih Driver \n";
-    cout << "==============================================" << '\n';
-    cin >> nama;
+void menuAntreanDriver(ptrdriver& driver) {
+    char ans;
+    cout << ">> List Antrean \n";
+                printPelanggan(driver);
+                if(driver->antri.head == nullptr){
+                    system("PAUSE");
+                }else {
+                    // drop pelanggan
+                    cout << ">> Drop Pelanggan (y/n)\n";
+                    cin >> ans;
+                    if(ans == 'y' || ans == 'Y') {
+                        pelangganSelesai(driver);
+                        system("PAUSE");  
+                    }else { 
+                        system("PAUSE");
+                    }
+                }
+}
+
+void menuHistoryDriver(ptrdriver driver) {
+    printRatingDriver(driver);
+    cout << "Total : " << driver->rating.sum << '\n';
+    system("PAUSE");
+}
+
+void menuPilihDriver(ptrdriver head) { // perlu di modularize
+    string nama; int num;
+    //char ans;
+    ptrdriver target;
+    bool found;
+    if(head == nullptr) {   // kalau tidak ada driver
+        system("PAUSE");
+    }else {                 // kalau ada driver dalam list
+        cout << "==============================================" << '\n';
+        cout << ">> Pilih Driver \n";
+        cout << "----------------------------------------------" << '\n';
+        cin >> nama;
+        searchDriver(head, target, nama, found);
+        if(found) {
+            cout << "1. Lihat antrean \n";
+            cout << "2. Lihat rating \n";
+            cout << "----------------------------------------------" << '\n';
+            cin >> num;
+            if(num == 2){ // rencananya history
+                // // tampilkan stack
+                // printRatingDriver(target);
+                // cout << "Total : " << target->rating.sum << '\n';
+                // system("PAUSE");
+                menuHistoryDriver(target);
+            }else {        // buat antrean
+                // tampilkan queue
+                // cout << ">> List Antrean \n";
+                // printPelanggan(target);
+                // if(target->antri.head == nullptr){
+                //     system("PAUSE");
+                // }else {
+                //     // drop pelanggan
+                //     cout << ">> Drop Pelanggan (y/n)\n";
+                //     cin >> ans;
+                //     if(ans == 'y' || ans == 'Y') {
+                //         pelangganSelesai(target);
+                //         system("PAUSE");  
+                //     }else { 
+                //         system("PAUSE");
+                //     }
+                // }
+                menuAntreanDriver(target);
+            }
+        }
+        
+    }
+    
 }
 
 void menuTambahDriver(ptrdriver& head, ptrdriver driver) {
@@ -55,13 +123,17 @@ void menuTambahDriver(ptrdriver& head, ptrdriver driver) {
 }
 
 void menuHapusDriver(ptrdriver& head) {
-    string nama;
+    string name;
     cout << "==============================================" << '\n';
     cout << ">> Hapus Driver \n";
     printDriver(head);
-    cout << "Tulis nama driver yg ingin dihapus \n";
-    cin >> nama;
-    delDriver(head, nama);
+    if(head == nullptr) {
+        system("PAUSE");
+    }else {
+        cout << ">> Tulis nama driver yg ingin dihapus \n";
+        cin >> name;
+        delDriver(head, name);
+    }
 }
 
 void menuPelanggan() {
@@ -72,14 +144,11 @@ void menuPelanggan() {
     cout << "1. Tambah Pelanggan \n";
     cout << "2. belom tau \n";
     cout << "----------------------------------------------" << '\n';
-
-
 }
 
 void menuTambahPelanggan(ptrpelanggan& pelanggan, ptrdriver head) {
-
     cout << "==============================================" << '\n';
-    cout << ">> Tambah Driver \n";
+    cout << ">> Tambah Pelanggan \n";
     createPelanggan(pelanggan, head);
 }
 

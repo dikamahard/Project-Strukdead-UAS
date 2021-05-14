@@ -12,13 +12,17 @@ void createStack(stack& s) {
     s.sum = 0;
 }
 
-void push(stack& s, int nilai) {
+void push(stack& s, int nilai, string nama) {
     if(s.top == maxElement-1 || s.sum + nilai > maxRating) {
-        cout << "Kuota driver hari ini habis \n";
+        cout << ">> Kuota driver hari ini habis (max 10 order)\n";
     }else {
+        // masukin nilai
         s.top += 1;
         s.poin[s.top] = nilai;
         s.sum += nilai;
+        // masukin nama
+        s.passanger[s.top] = nama;
+
     }
 }
 
@@ -36,7 +40,7 @@ bool isEmpty(stack s) {
 
 void pop(stack& s, int& atas) {
     if(isEmpty(s)) {
-        cout << "Belum ada rating driver \n";
+        cout << ">> Belum ada rating driver \n";
     }else {
         atas = peek(s);
         s.sum -= atas;
@@ -46,7 +50,7 @@ void pop(stack& s, int& atas) {
 
 void printPoin(stack s) {   // apa butuh ?? masi ragu
     if(isEmpty(s)) {
-        cout << "Barang Kosong \n";
+        cout << ">> Belum ada rating driver \n";
     }else {
         for(int i=s.top; i>=0; i--) {
             cout << s.poin[i] << '\n';
@@ -84,7 +88,7 @@ void dequeue(/*ptrpelanggan pelanggan, */ ptrdriver& driver) {
     ptrpelanggan del;
 
     if(driver->antri.head == nullptr) {
-        cout << "Antrean kosong \n";
+        cout << ">> Antrean kosong \n";
     }else if(driver->antri.head->nextPelanggan == nullptr) {
         del = driver->antri.head;
         driver->antri.head = nullptr;
@@ -102,10 +106,9 @@ void dequeue(/*ptrpelanggan pelanggan, */ ptrdriver& driver) {
 void createDriver(ptrdriver& newDriver) {
     newDriver = new driver;
 
-    cout << "Masukkan Nama Driver : \n";
+    cout << ">> Masukkan Nama Driver : \n";
     cin >> newDriver->namaDriver;
     
-    //newDriver->firstPelanggan = nullptr;
     newDriver->nextDriver = nullptr;
     newDriver->prevDriver = nullptr;
     createStack(newDriver->rating);
@@ -182,27 +185,31 @@ void printDriver(ptrdriver head) {
 
 void pelangganSelesai(ptrdriver& driver) {
     int nilai;
-    dequeue(driver);
-    cout << "Beri penilaian pada driver kami \n";
+    //dequeue(driver);
+    cout << ">> Beri penilaian pada driver kami (1-5) \n";
     cin >> nilai;
-
-    push(driver->rating, nilai);
+    if(nilai > 5) {
+        cout << ">> Maaf nilai terlalu besar, akan kami anggap 5 poin ^_^\n";
+        nilai = 5;
+    }else if (nilai < 1) {
+        cout << ">> Maaf nilai terlalu kecil, akan kami anggap 1 poin ^_^ \n";
+        nilai = 1;
+    }
+    cout << ">> Terimakasih telah menggunakan jasa kami \n";
+    // mungkin bisa di push nama nya sekalian buat rancana history nanti
+    push(driver->rating, nilai, driver->antri.head->namaPelanggan);
+    //push(driver->rating)
+    dequeue(driver);
 }
 
-void printRatingDriver() {
-
+void printRatingDriver(ptrdriver driver) {
+    // rencananya buat history rating orderan dari si driver
+    cout << ">> Rating dari driver " << driver->namaDriver << '\n';
+    for(int i = driver->rating.top; i>=0; i--) {
+        cout << driver->rating.passanger[i] << " - ";
+        cout << driver->rating.poin[i] << '\n';
+    }
 }
-
-/*
-void inputBarang(ptrdriver head, ptrdriver psearch, string key, ptrpelanggan pelanggan) {
-    searchDriver(head, psearch, key);
-
-    cout << "Masukkan Jumlah Barang \n";
-    cin >> pelanggan->barang;
-
-    //psearch->barang = pelanggan->barang.jumlahBarang;
-}
-*/
 
 // ========>  BATAS FUNGSI UNTUK DRIVER   <=========  //
 
@@ -216,8 +223,9 @@ void pilihDriver(ptrpelanggan pelanggan, ptrdriver& driver, ptrdriver& target) {
     //stack b;
     bool found;
 
+    cout << ">> Pilih Driver Pengantar \n";
     printDriver(driver);
-    cout << "Pilih Driver Pengantar \n";
+    cout << "----------------------------------------------" << '\n';
     cin >> nama;
 
     searchDriver(driver, target, nama, found);
@@ -241,7 +249,7 @@ void pilihDriver(ptrpelanggan pelanggan, ptrdriver& driver, ptrdriver& target) {
         // }
         enqueue(pelanggan, target);
     }else{
-        cout << "Tidak ada \n";
+        cout << ">> Tidak ada driver \n";
     }
     //driver->nextDriver->firstPelanggan = pelanggan; // KOK BISA???
 }
@@ -251,7 +259,7 @@ void createPelanggan(ptrpelanggan& newPelanggan, ptrdriver& driver) {
     string nama;
     ptrdriver target;  
 
-    cout << "Masukkan Nama Pelanggan \n";
+    cout << ">> Masukkan Nama Pelanggan \n";
     cin >> newPelanggan->namaPelanggan;
     //cout << "Masukkan Jumlah Barang \n";
     //cin >> newPelanggan->nilai; 
@@ -272,6 +280,7 @@ void printPelanggan(ptrdriver target) {
     if(temp == nullptr) {
         cout << "Antrean Kosong \n";
     }else {
+        //cout << "Pelanggan yang mengantre \n";
         while(temp != nullptr) {
         cout << temp->namaPelanggan << '\n';
         temp = temp->nextPelanggan;
