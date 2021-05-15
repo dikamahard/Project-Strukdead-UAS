@@ -47,13 +47,15 @@ int main() {
                     break;
 
                     case 2 :
-                        // belom tau
+                        // belom tau, mungkin buat cancel
                     break;
                 }
             break;
 
             case 3 :
                 // belom tau, mungkin buat nampilin driver dan pelanggan semua
+                displayAll(pala);
+                system("PAUSE");
             break;
 
             case 4 :

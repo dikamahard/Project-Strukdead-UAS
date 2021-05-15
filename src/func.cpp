@@ -211,6 +211,26 @@ void printRatingDriver(ptrdriver driver) {
     }
 }
 
+void displayAll(ptrdriver driver) {
+    ptrdriver temp = driver;
+    ptrpelanggan tmp;  
+
+    if(driver == nullptr) {
+        cout << "Nothing to Display \n";
+    }else {
+        while(temp != nullptr) {
+            cout << "Driver " << temp->namaDriver << '\n';
+            tmp = temp->antri.head;
+            while(tmp != nullptr) {
+                cout << "- " << tmp->namaPelanggan << '\n'; 
+                tmp = tmp->nextPelanggan;
+            }
+            cout << '\n';
+            temp = temp->nextDriver;
+        }
+    }    
+}
+
 // ========>  BATAS FUNGSI UNTUK DRIVER   <=========  //
 
 // ========>  FUNGSI PELANGGAN  <=========  //
