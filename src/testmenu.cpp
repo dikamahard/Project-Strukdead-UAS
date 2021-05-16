@@ -53,7 +53,7 @@ int main() {
             break;
 
             case 3 :
-                // belom tau, mungkin buat nampilin driver dan pelanggan semua
+                //buat nampilin driver dan pelanggan semua
                 displayAll(pala);
                 system("PAUSE");
             break;

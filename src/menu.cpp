@@ -17,7 +17,7 @@ void mainMenu() {
     cout << "==============================================" << '\n';
     cout << "1. Driver \n";
     cout << "2. Pelanggan \n";
-    cout << "3. belom tau \n";
+    cout << "3. Show All \n";
     cout << "4. Keluar \n";
     cout << "----------------------------------------------" << '\n';
 }
