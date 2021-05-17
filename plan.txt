@@ -1,30 +1,30 @@
 Brain Storming
 
-*Program Clone GoSend (Dilihat dari sisi perusahaan)
+*Program Clone Gojek (Dilihat dari sisi perusahaan)
 
 ==> Driver (linked list)
 - Menambah Driver (input data driver)
 - Menghapus Driver
-- Melihat Driver perorangan (Status jumlah antrian dan barang)
+- Melihat Driver perorangan (Status jumlah antrian dan history rating)
 - Melihat Seluruh Driver 
 
 ==> Pelanggan (Queue)
 - Dapat memilih driver yang tersedia
 - Menambah Pelanggan (input data pelanggan)
-- Menghapus pelanggan yang sudah selesai
+- Mendequeue pelanggan yang sudah sampai tujuan
 - Melihat seluruh pelanggan 
-- Menginput jumlah barang
+- Menginput nilai rating untuk driver
 
-==> Barang (Stack)
-- Push barang
-- Pop barang
+==> Rating History Driver (Stack)
+- Push nilai dan nama pelanggan
+- Pop nilai dan nama pelanggan
 
 ================================================================================
 
 - driver
 
 	-daftar
-	(menampilkan seluruh driver beserta statusnya, kemudian pilih driver untuk drop barang)
+	(menampilkan seluruh driver beserta statusnya, kemudian pilih driver untuk drop pelanggan)
 
 	-tambah
 	(menambah node driver pada list, )
@@ -36,7 +36,7 @@ Brain Storming
 - pelanggan
 
 	-tambah 
-	(masukkan data pelanggan, masukkan jml barang, pilih driver)
+	(masukkan data pelanggan, pilih driver)
 
 	-daftar 
 	(menampilkan list pelanggan) 

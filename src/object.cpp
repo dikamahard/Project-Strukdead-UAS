@@ -18,22 +18,18 @@ struct queue {
 };
 
 struct stack {
-    //int jumlahBarang[maxElement];
-    int poin[maxElement];
-    // string passanger[maxElement];
-    string passanger[maxElement];
+    int poin[maxElement];     // buat nyimpen nilai yg dikasih pelanggan
+    string passanger[maxElement]; // buat nyimpen nama pelanggan
     int sum;  // sum akan terus terakumulasi setiap ada penilaian, sum <= maxRating
     int top;
 };
 
 struct  driver {
     string namaDriver;
-
-    //pelanggan *firstPelanggan;
-    queue antri;
+    queue antri;            // penghubung ke linked list pelanggan
     driver *nextDriver;
     driver *prevDriver;
-    stack rating;  // tadinya tipe data pointer 
+    stack rating;          
 };
 
 

@@ -4,9 +4,9 @@ using namespace std;
 
 
 int main() {
-    ptrdriver pala, coba;
-    ptrpelanggan test;
-    pala = nullptr;
+    ptrdriver kepala, mangOjek;
+    ptrpelanggan customer;
+    kepala = nullptr;
     int pil;
 
     do {
@@ -22,17 +22,15 @@ int main() {
                 switch(pil) {
 
                     case 1 : 
-                        menuListDriver(pala);
-                        //harusnya if control disini janagan di fungsi menuPilihDriver
-                        menuPilihDriver(pala);
+                        menuListDriver(kepala);
                     break;
 
                     case 2 : 
-                        menuTambahDriver(pala, coba);
+                        menuTambahDriver(kepala, mangOjek);
                     break;
 
                     case 3 : 
-                        menuHapusDriver(pala);
+                        menuHapusDriver(kepala);
                     break;
                 }
             break;
@@ -43,18 +41,19 @@ int main() {
                 switch(pil) {
 
                     case 1 : 
-                        menuTambahPelanggan(test, pala);
+                        menuTambahPelanggan(customer, kepala);
                     break;
 
                     case 2 :
                         // belom tau, mungkin buat cancel
+                        system("PAUSE");
                     break;
                 }
             break;
 
             case 3 :
                 //buat nampilin driver dan pelanggan semua
-                displayAll(pala);
+                displayAll(kepala);
                 system("PAUSE");
             break;
 

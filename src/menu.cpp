@@ -9,7 +9,7 @@ using namespace std;
 void mainMenu() {
     int pil;
     cout << "==============================================" << '\n';
-    cout << "               PROGRAM CLONE GO-JEK           " << '\n';
+    cout << "               PROGRAM OK-JEK                 " << '\n';
     cout << "==============================================" << '\n' << '\n';
 
     cout << "==============================================" << '\n';
@@ -34,29 +34,23 @@ void menuDriver() {
 
 }
 
-void menuListDriver(ptrdriver head) {
-    cout << "==============================================" << '\n';
-    cout << ">> List Driver \n";
-    printDriver(head);
-}
-
 void menuAntreanDriver(ptrdriver& driver) {
     char ans;
     cout << ">> List Antrean \n";
-                printPelanggan(driver);
-                if(driver->antri.head == nullptr){
-                    system("PAUSE");
-                }else {
-                    // drop pelanggan
-                    cout << ">> Drop Pelanggan (y/n)\n";
-                    cin >> ans;
-                    if(ans == 'y' || ans == 'Y') {
-                        pelangganSelesai(driver);
-                        system("PAUSE");  
-                    }else { 
-                        system("PAUSE");
-                    }
-                }
+    printPelanggan(driver);
+    if(driver->antri.head == nullptr){
+        system("PAUSE");
+    }else {
+    // drop pelanggan
+        cout << ">> Drop Pelanggan (y/n)\n";
+        cin >> ans;
+        if(ans == 'y' || ans == 'Y') {
+            pelangganSelesai(driver);
+            system("PAUSE");  
+        }else { 
+            system("PAUSE");
+        }
+    }
 }
 
 void menuHistoryDriver(ptrdriver driver) {
@@ -82,17 +76,30 @@ void menuPilihDriver(ptrdriver head) { // perlu di modularize
             cout << "2. Lihat rating \n";
             cout << "----------------------------------------------" << '\n';
             cin >> num;
-            if(num == 2){ // rencananya history
-                // // tampilkan stack
+            if(num == 2){ // tampilkan rating history
+                // tampilkan stack rating
                 menuHistoryDriver(target);
-            }else {        // buat antrean
-                // tampilkan queue
+            }else if(num == 1) {       
+                // tampilkan queue antrean
                 menuAntreanDriver(target);
+            }else {
+                cout << ">> ERROR!! \n";
+                system("PAUSE");
             }
+        }else {
+            cout << ">> Driver tidak ditemukan \n";
+            system("PAUSE");
         }
         
     }
     
+}
+
+void menuListDriver(ptrdriver head) {
+    cout << "==============================================" << '\n';
+    cout << ">> List Driver \n";
+    printDriver(head);
+    menuPilihDriver(head);
 }
 
 void menuTambahDriver(ptrdriver& head, ptrdriver driver) {
@@ -122,7 +129,7 @@ void menuPelanggan() {
     cout << "==============================================" << '\n' << '\n';
 
     cout << "1. Tambah Pelanggan \n";
-    cout << "2. belom tau \n";
+    cout << "2. For Future Updates \n";
     cout << "----------------------------------------------" << '\n';
 }
 

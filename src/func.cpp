@@ -8,19 +8,19 @@ using namespace std;
 
 void createStack(stack& s) {
     s.top = -1;
-    s.poin[s.top] = 0;
-    s.sum = 0;
+    s.poin[s.top] = 0;      
+    s.sum = 0;              
 }
 
 void push(stack& s, int nilai, string nama) {
     if(s.top == maxElement-1 || s.sum + nilai > maxRating) {
         cout << ">> Kuota driver hari ini habis (max 10 order)\n";
     }else {
-        // masukin nilai
+        // masukin nilai ke stack
         s.top += 1;
         s.poin[s.top] = nilai;
         s.sum += nilai;
-        // masukin nama
+        // masukin nama ke stack
         s.passanger[s.top] = nama;
 
     }
@@ -45,16 +45,6 @@ void pop(stack& s, int& atas) {
         atas = peek(s);
         s.sum -= atas;
         s.top -= 1;
-    }
-}
-
-void printPoin(stack s) {   // apa butuh ?? masi ragu
-    if(isEmpty(s)) {
-        cout << ">> Belum ada rating driver \n";
-    }else {
-        for(int i=s.top; i>=0; i--) {
-            cout << s.poin[i] << '\n';
-        }
     }
 }
 
@@ -151,7 +141,7 @@ void delDriver(ptrdriver& head, string key) {                  // Delete by key
         } else if (del->nextDriver == nullptr){                // Delete last
             del->prevDriver->nextDriver = nullptr;
             del->prevDriver = nullptr;
-        } else {
+        } else {                                               // Delete mid
             del->prevDriver->nextDriver = del->nextDriver;
             del->nextDriver->prevDriver = del->prevDriver;
             del->nextDriver = nullptr;
@@ -176,7 +166,6 @@ void printDriver(ptrdriver head) {
 
 void pelangganSelesai(ptrdriver& driver) {
     int nilai;
-    //dequeue(driver);
     cout << ">> Beri penilaian pada driver kami (1-5) \n";
     cin >> nilai;
     if(nilai > 5) {
@@ -187,13 +176,13 @@ void pelangganSelesai(ptrdriver& driver) {
         nilai = 1;
     }
     cout << ">> Terimakasih telah menggunakan jasa kami \n";
-    // mungkin bisa di push nama nya sekalian buat rancana history nanti
+    // push nilai dari pelanggan + nama pelanggan ke stack rating history driver
     push(driver->rating, nilai, driver->antri.head->namaPelanggan);
+    // habis di push baru pelanggan di dequeue tanda pelanggan sudah sampai
     dequeue(driver);
 }
 
 void printRatingDriver(ptrdriver driver) {
-    // rencananya buat history rating orderan dari si driver
     cout << ">> Rating dari driver " << driver->namaDriver << '\n';
     for(int i = driver->rating.top; i>=0; i--) {
         cout << driver->rating.passanger[i] << " - ";
@@ -201,7 +190,7 @@ void printRatingDriver(ptrdriver driver) {
     }
 }
 
-void displayAll(ptrdriver driver) {
+void displayAll(ptrdriver driver) { // nampilin semua driver dan queue yang sekarang
     ptrdriver temp = driver;
     ptrpelanggan tmp;  
 
@@ -229,8 +218,6 @@ void displayAll(ptrdriver driver) {
 
 void pilihDriver(ptrpelanggan pelanggan, ptrdriver& driver, ptrdriver& target) {
     string nama;
-    //ptrdriver target;
-    //stack b;
     bool found;
 
     cout << ">> Pilih Driver Pengantar \n";
@@ -239,9 +226,6 @@ void pilihDriver(ptrpelanggan pelanggan, ptrdriver& driver, ptrdriver& target) {
     cin >> nama;
 
     searchDriver(driver, target, nama, found);
-    //createStack(b);
-    //push(target->barang, pelanggan->barang);
-    //masukin barang ke stack barang driver
 
     //masukkin pelanggan ke queue si driver yg dipilih
     if(found){
@@ -258,15 +242,9 @@ void createPelanggan(ptrpelanggan& newPelanggan, ptrdriver& driver) {
 
     cout << ">> Masukkan Nama Pelanggan \n";
     cin >> newPelanggan->namaPelanggan;
-    // bakal ditaroh fungsi pilih driver disini
     pilihDriver(newPelanggan, driver, target);
-    // fungsi pilih driver akan langsung menyambumngkan pelanggan ke queue & barang
+    // fungsi pilih driver akan langsung menyambumngkan pelanggan ke queue
     newPelanggan->nextPelanggan = nullptr;
-}
-
-void kapsulasi(ptrpelanggan p, ptrdriver d) {
-    // kapsulasi pembuatan pelanggan dan input barang serta pilih driver
-    // driver akan terhubung dengan antrian dan stack
 }
 
 void printPelanggan(ptrdriver target) {
