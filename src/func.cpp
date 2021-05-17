@@ -72,19 +72,13 @@ void enqueue(ptrpelanggan pelanggan, ptrdriver& driver) {
     if (driver->antri.head  == nullptr) {
         driver->antri.head = pelanggan;
         driver->antri.tail = pelanggan;
-        //driver->firstPelanggan = pelanggan;
     }else {
-        // ptrpelanggan temp = driver->firstPelanggan;
-        // while(temp->nextPelanggan != nullptr){
-        //     temp = temp->nextPelanggan;
-        // }
-        // temp->nextPelanggan = pelanggan;
         driver->antri.tail->nextPelanggan = pelanggan;
         driver->antri.tail = pelanggan;
     }
 }
 
-void dequeue(/*ptrpelanggan pelanggan, */ ptrdriver& driver) {
+void dequeue( ptrdriver& driver) {
     ptrpelanggan del;
 
     if(driver->antri.head == nullptr) {
@@ -141,9 +135,6 @@ void searchDriver(ptrdriver head, ptrdriver& psearch, string key, bool& found) {
             psearch = psearch->nextDriver;
         }
     }
-    // if(!found) {
-    //     cout << "Not Found!! \n";
-    // }
 }
 
 void delDriver(ptrdriver& head, string key) {                  // Delete by key
@@ -198,7 +189,6 @@ void pelangganSelesai(ptrdriver& driver) {
     cout << ">> Terimakasih telah menggunakan jasa kami \n";
     // mungkin bisa di push nama nya sekalian buat rancana history nanti
     push(driver->rating, nilai, driver->antri.head->namaPelanggan);
-    //push(driver->rating)
     dequeue(driver);
 }
 
@@ -254,24 +244,11 @@ void pilihDriver(ptrpelanggan pelanggan, ptrdriver& driver, ptrdriver& target) {
     //masukin barang ke stack barang driver
 
     //masukkin pelanggan ke queue si driver yg dipilih
-    //driver->firstPelanggan = pelanggan;
-
-    //ptrpelanggan temp = target->firstPelanggan;
     if(found){
-        // if(target->firstPelanggan == nullptr) {
-        //     target->firstPelanggan = pelanggan;
-        // }else {
-        //     ptrpelanggan temp = target->firstPelanggan;
-        //     while(temp->nextPelanggan != nullptr){
-        //         temp = temp->nextPelanggan;
-        //     }
-        //     temp->nextPelanggan = pelanggan;
-        // }
         enqueue(pelanggan, target);
     }else{
         cout << ">> Tidak ada driver \n";
     }
-    //driver->nextDriver->firstPelanggan = pelanggan; // KOK BISA???
 }
 
 void createPelanggan(ptrpelanggan& newPelanggan, ptrdriver& driver) {
@@ -281,8 +258,6 @@ void createPelanggan(ptrpelanggan& newPelanggan, ptrdriver& driver) {
 
     cout << ">> Masukkan Nama Pelanggan \n";
     cin >> newPelanggan->namaPelanggan;
-    //cout << "Masukkan Jumlah Barang \n";
-    //cin >> newPelanggan->nilai; 
     // bakal ditaroh fungsi pilih driver disini
     pilihDriver(newPelanggan, driver, target);
     // fungsi pilih driver akan langsung menyambumngkan pelanggan ke queue & barang
@@ -300,14 +275,11 @@ void printPelanggan(ptrdriver target) {
     if(temp == nullptr) {
         cout << "Antrean Kosong \n";
     }else {
-        //cout << "Pelanggan yang mengantre \n";
         while(temp != nullptr) {
         cout << temp->namaPelanggan << '\n';
         temp = temp->nextPelanggan;
     }
     }
-    
-    // masih ragu
 }
 
 
