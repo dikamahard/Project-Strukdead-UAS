@@ -18,13 +18,16 @@ Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam me
 
 
 ## Penjelasan Aplikasi
-Prinsip program OK-JEK ini hampir sama seperti Gojek, yaitu terdapat list driver yang menyediakan jasa ojek online, kemudian tersedia antrian bagi pemesan yang ingin memakai jasa driver tersebut, dan driver memiliki batas ngojek perhari. Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
+Prinsip Program OK-JEK ini hampir sama seperti fitur Go-Ride ataupun jasa ojek online lainnya. Dalam program ini
+terdapat list driver yang menyediakan jasa antar/angkut, kemudian tersedia antrian bagi pelanggan yang ingin memakai jasa antar oleh driver tersebut dengan menerapkan queue, dan pelanggan dapat memberikan nilai rating kepada driver setelah selesai diantar, lalu nilai rating tersebut akan disimpan dengan menerapkan stack.
+
+Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
 1. Menambah (input data) dan menghapus driver
 2. Melihat driver perorangan (status jumlah antrian dan history rating)
 3. Melihat seluruh driver dan pelanggan
 4. Pelanggan dapat memilih driver yang tersedia
 5. Menambah (input data) dan menghapus pelanggan
-6. Menghapus pelanggan yang sudah selesai melakukan pesanan
+6. Melihat antrian pelanggan
 7. Pelanggan dapat memberikan rating pada driver
 
 
