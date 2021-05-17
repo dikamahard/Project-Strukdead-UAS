@@ -14,7 +14,7 @@ Oleh karena itu, kami terinspirasi dari fitur Go-ride yang ada pada aplikasi Goj
 ## Tujuan dan Manfaat
 Tujuan dibuatnya program OK-JEK ini adalah untuk memenuhi penilaian akhir (UAS) Praktikum Stuktur Data dalam bentuk project yang dikerjakan secara berkelompok. 
 
-Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan oleh asisten praktikum selama satu semester menjadi suatu program yang dapat berjalan dengan baik. Selain itu, kami berharap agar dengan hadirnya program ini dapat berguna dalam mengatur (secara sederhana) sistem antar barang melalui jasa ojek online. 
+Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam mengimplementasikan materi yang sudah disampaikan oleh asisten praktikum selama satu semester menjadi suatu program yang dapat berjalan dengan baik. Selain itu, kami berharap agar dengan hadirnya program ini dapat berguna dalam mengatur (secara sederhana) sistem jasa antar melalui jasa ojek online. 
 
 
 ## Penjelasan Aplikasi
