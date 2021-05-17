@@ -38,7 +38,6 @@ void menuListDriver(ptrdriver head) {
     cout << "==============================================" << '\n';
     cout << ">> List Driver \n";
     printDriver(head);
-    //cout << ">> Pilih Driver \n";
 }
 
 void menuAntreanDriver(ptrdriver& driver) {
@@ -68,7 +67,6 @@ void menuHistoryDriver(ptrdriver driver) {
 
 void menuPilihDriver(ptrdriver head) { // perlu di modularize
     string nama; int num;
-    //char ans;
     ptrdriver target;
     bool found;
     if(head == nullptr) {   // kalau tidak ada driver
@@ -86,27 +84,9 @@ void menuPilihDriver(ptrdriver head) { // perlu di modularize
             cin >> num;
             if(num == 2){ // rencananya history
                 // // tampilkan stack
-                // printRatingDriver(target);
-                // cout << "Total : " << target->rating.sum << '\n';
-                // system("PAUSE");
                 menuHistoryDriver(target);
             }else {        // buat antrean
                 // tampilkan queue
-                // cout << ">> List Antrean \n";
-                // printPelanggan(target);
-                // if(target->antri.head == nullptr){
-                //     system("PAUSE");
-                // }else {
-                //     // drop pelanggan
-                //     cout << ">> Drop Pelanggan (y/n)\n";
-                //     cin >> ans;
-                //     if(ans == 'y' || ans == 'Y') {
-                //         pelangganSelesai(target);
-                //         system("PAUSE");  
-                //     }else { 
-                //         system("PAUSE");
-                //     }
-                // }
                 menuAntreanDriver(target);
             }
         }
