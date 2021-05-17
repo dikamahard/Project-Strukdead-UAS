@@ -8,7 +8,7 @@ Anggota Kelompok:
 ## Latar Belakang
 Seiring dengan perkembangan zaman, teknologi pun kian berkembang pesat. Tak heran jika banyak pekerjaan sehari-hari menjadi lebih mudah dengan bantuan teknologi. Mulai dari menggunakan social media, mengakses berbagai informasi melalui internet, menggunakan peralatan canggih untuk membersihkan rumah, melakukan transaksi online, hingga memakai aplikasi tertentu untuk kebutuhan rumah tangga. Salah satu contoh aplikasi yang sudah tak asing lagi namanya di kalangan masyarakat ialah Gojek. Aplikasi ini melayani angkutan melalui jasa ojek. Beberapa fitur gojek antara lain adalah go-ride, gocar, gofood, gopay, gosend, dan lain lain. Dengan kehadiran gojek, masyarakat dapat dengan mudah memesan makanan, mengantar barang, membayar tagihan, dan masih banyak lagi. 
 
-Oleh karena itu, kami terinspirasi dari fitur Go-ride yang ada pada aplikasi Gojek, untuk membuat suatu program sederhara yang bernama “Program OK-JEK” dengan menerapkan materi-materi struktur data. Program ini dirancang untuk mengatur sistem jasa antar sesuai orderan antara driver dan customer. 
+Oleh karena itu, kami terinspirasi dari fitur Go-ride yang ada pada aplikasi Gojek, untuk membuat suatu program sederhara yang bernama “Program OK-JEK” dengan menerapkan materi-materi struktur data. Program ini dirancang untuk mengatur sistem jasa antar antara driver dan customer. 
 
 
 ## Tujuan dan Manfaat
