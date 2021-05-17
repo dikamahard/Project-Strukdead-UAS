@@ -18,7 +18,7 @@ Manfaat pembuatan program ini adalah untuk melatih kemampuan praktikkan dalam me
 
 
 ## Penjelasan Aplikasi
-Prinsip program Send-it ini hampir sama seperti Go Send, yaitu terdapat list driver yang menyediakan jasa antar barang berdasarkan pesanan, kemudian tersedia antrian bagi pemesan yang ingin memakai jasa driver tersebut, dan driver memiliki batas barang yang akan diantar dengan menerapkan stack. Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
+Prinsip program OK-JEK ini hampir sama seperti Gojek, yaitu terdapat list driver yang menyediakan jasa ojek online, kemudian tersedia antrian bagi pemesan yang ingin memakai jasa driver tersebut, dan driver memiliki batas ngojek perhari. Selain itu, program ini juga bertujuan agar dapat melakukan beberapa hal, antara lain adalah sebagai berikut :
 1. Menambah (input data) dan menghapus driver
 2. Melihat driver perorangan (status jumlah antrian dan history rating)
 3. Melihat seluruh driver dan pelanggan
@@ -28,16 +28,21 @@ Prinsip program Send-it ini hampir sama seperti Go Send, yaitu terdapat list dri
 7. Pelanggan dapat memberikan rating pada driver
 
 
-![image](https://user-images.githubusercontent.com/66240799/116961288-27be7b00-accd-11eb-8172-4992f8b87e3e.png)
+![image](https://user-images.githubusercontent.com/66240799/118538058-e66fa600-b777-11eb-99fd-bd0b658a7c26.png)
+
 
 
 
 ## Gambar Rancangan Antar Muka
-<!--
-Buat rancangan antar muka selengkap mungkin sesuai fungsi aplikasinya. rancangan antar muka
-diusahakan serapih dan seindah mungkin. tools yang digunakan dalam pembuatan rancangan gambar
-dibebaskan sesuai kreatifitas kalian
-!-->
+* MAIN MENU
+![image](https://user-images.githubusercontent.com/66240799/118541209-a5799080-b77b-11eb-8344-aa2c9a6cfbf9.png)
+
+* DRIVER MENU
+![image](https://user-images.githubusercontent.com/66240799/118541744-449e8800-b77c-11eb-9e8c-b71fcea8df07.png)
+
+* PELANGGAN MENU
+![image](https://user-images.githubusercontent.com/66240799/118541870-6bf55500-b77c-11eb-949c-c74dd2e20a9b.png)
+
 
 
 ## Rencana Pengerjaan Projek
