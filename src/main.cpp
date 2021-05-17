@@ -7,10 +7,10 @@ int main() {
     ptrdriver pala, coba;
     ptrpelanggan test;
     pala = nullptr;
-    int pil; //string nama;
+    int pil;
 
     do {
-        //system ("PAUSE");
+        
         mainMenu();
         cout << ">> Pilihan: \n";
         cin >> pil;
